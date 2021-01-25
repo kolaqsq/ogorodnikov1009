@@ -9,7 +9,7 @@
       "email": "VilfridPlatonov459@gunga.org",
       "birthdate": "1991-08-08",
       "group": "181-228",
-      "program": 0
+      "program": 2
     },
     {
       "id": 2,
@@ -19,8 +19,8 @@
       "phone": "+7 (901) 070-03-40",
       "email": "KarrMaslov292@gunga.org",
       "birthdate": "1998-01-12",
-      "group": "181-339",
-      "program": 1
+      "group": "201-339",
+      "program": 2
     },
     {
       "id": 3,
@@ -30,7 +30,7 @@
       "phone": "+7 (958) 633-13-20",
       "email": "AyslinnZheleznaya253@gunga.org",
       "birthdate": "1992-03-04",
-      "group": "171-420",
+      "group": "181-228",
       "program": 2
     },
     {
@@ -41,14 +41,58 @@
       "phone": "+7 (995) 045-51-25",
       "email": "ZelidaKalashnikova652@gunga.org",
       "birthdate": "1990-05-26",
-      "group": "191-228",
-      "program": 3
+      "group": "201-339",
+      "program": 2
     },
     {
       "id": 5,
+      "surname": "Антонов",
+      "name": "Мхитар",
+      "patronymic": "Миронович",
+      "phone": "+7 (999) 760-09-47",
+      "email": "MhitarAntonov322@gmail.com",
+      "birthdate": "1990-05-26",
+      "group": "191-420",
+      "program": 1
+    },
+    {
+      "surname": "Валинин",
+      "name": "Треван",
+      "patronymic": "Святославович",
+      "phone": "+7 (999) 760-09-43",
+      "email": "TrevanValinin111@gunga.org",
+      "birthdate": "1992-03-04",
+      "group": "191-420",
+      "program": 1,
+      "id": 6
+    },
+    {
+      "surname": "Гаврилова",
+      "name": "Альзана",
+      "patronymic": "",
+      "phone": "+7 (924) 048-14-24",
+      "email": "AlzanaGavrilova201@gunga.org",
+      "birthdate": "1992-03-04",
+      "group": "171-420",
+      "program": 1,
+      "id": 7
+    },
+    {
+      "surname": "Веселков",
+      "name": "Грыць",
+      "patronymic": "",
+      "phone": "+7 (985) 026-62-03",
+      "email": "GrytsVeselkov666@gmail.com",
+      "birthdate": "1992-03-04",
+      "group": "171-420",
+      "program": 1,
+      "id": 8
+    },
+    {
+      "id": 9,
       "surname": "Самсонов",
       "name": "Вячеслав",
-      "patronymic": "",
+      "patronymic": "Александрович",
       "phone": "+7 (999) 760-09-47",
       "email": "kolaqsq1707@gmail.com",
       "birthdate": "2021-01-07",
@@ -56,37 +100,81 @@
       "program": 0
     },
     {
-      "surname": "Ogorodnikov",
-      "name": "Nikolay",
-      "patronymic": "dfsd",
-      "phone": "+7 (999) 760-09-43",
-      "email": "kolaqsq1707@gmail.com",
-      "birthdate": "2021-01-08",
-      "group": "191-321",
-      "program": 0,
-      "id": 6
-    },
-    {
-      "surname": "Ogorodnikov",
-      "name": "Nikolay",
-      "patronymic": "",
-      "phone": "+7 (999) 760-09-47",
-      "email": "kolaqsq1707@gmail.com",
-      "birthdate": "2021-01-08",
-      "group": "123-321",
-      "program": 2,
-      "id": 7
-    },
-    {
       "surname": "Огородников",
       "name": "Николай",
-      "patronymic": "",
+      "patronymic": "Александрович",
       "phone": "+7 (999) 760-09-47",
       "email": "kolaqsq1707@gmail.com",
       "birthdate": "2021-01-07",
-      "group": "123-321",
-      "program": 1,
-      "id": 8
+      "group": "191-321",
+      "program": 0,
+      "id": 10
+    },
+    {
+      "surname": "Гилуть",
+      "name": "Занда",
+      "patronymic": "Станиславовна",
+      "phone": "+7 (903) 118-85-71",
+      "email": "ZandaGilut395@gmail.com",
+      "birthdate": "1992-03-04",
+      "group": "181-322",
+      "program": 0,
+      "id": 11
+    },
+    {
+      "surname": "Доценко",
+      "name": "Рафига",
+      "patronymic": "",
+      "phone": "+7 (975) 393-67-09",
+      "email": "RafigaDotsenko352@gmail.com",
+      "birthdate": "1992-03-04",
+      "group": "181-322",
+      "program": 0,
+      "id": 12
+    },
+    {
+      "surname": "Литвинов",
+      "name": "Амре",
+      "patronymic": "",
+      "phone": "+7 (925) 207-91-37",
+      "email": "AmreLitvinov152@gmail.com",
+      "birthdate": "1992-03-04",
+      "group": "181-101",
+      "program": 3,
+      "id": 13
+    },
+    {
+      "surname": "Наварский",
+      "name": "Аврум",
+      "patronymic": "Ярославович",
+      "phone": "+7 (975) 393-67-09",
+      "email": "AvrumNavarskiy879@gmail.com",
+      "birthdate": "1992-03-04",
+      "group": "181-101",
+      "program": 3,
+      "id": 14
+    },
+    {
+      "surname": "Тимошенко",
+      "name": "Энельгиса",
+      "patronymic": "Георгиевна",
+      "phone": "+7 (975) 393-67-09",
+      "email": "EnelgisaTimoshenko434@gmail.com",
+      "birthdate": "1992-03-04",
+      "group": "181-007",
+      "program": 3,
+      "id": 15
+    },
+    {
+      "surname": "Дарьянова",
+      "name": "Ренея",
+      "patronymic": "Вячеславовна",
+      "phone": "+7 (975) 393-67-09",
+      "email": "RafigaDotsenko352@gmail.com",
+      "birthdate": "1992-03-04",
+      "group": "181-007",
+      "program": 3,
+      "id": 16
     }
   ]
 }
