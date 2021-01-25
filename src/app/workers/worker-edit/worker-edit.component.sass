@@ -1,0 +1,80 @@
+$standard-font: 'Montserrat', sans-serif
+
+form
+  display: flex
+  flex-flow: column nowrap
+  align-items: flex-start
+  justify-content: flex-start
+  margin: 2.5%
+
+  div
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    justify-content: space-between
+    width: 50%
+    min-width: 500px
+    margin-bottom: 1.25%
+
+    label
+      font-family: $standard-font
+      font-style: normal
+      font-weight: 300
+      font-size: 1rem
+      display: flex
+      align-items: center
+      margin: 0
+
+    select
+      font-family: $standard-font
+      font-style: normal
+      font-weight: 300
+      font-size: 1rem
+      display: flex
+      align-items: center
+      width: 50%
+      box-sizing: content-box
+      border: 1px solid black
+
+    input
+      font-family: $standard-font
+      font-style: normal
+      font-weight: 300
+      font-size: 1rem
+      display: flex
+      align-items: center
+      width: 50%
+      border: 1px solid black
+      padding: 0
+
+  .row
+    justify-content: flex-start
+
+    button
+      font-family: $standard-font
+      font-size: 1rem
+      font-weight: 300
+      border-radius: 5px
+      padding: 1.25% 2.5%
+      margin-right: 2.5%
+      background: none
+
+      &:focus
+        outline: none
+
+    .delete
+      border: 1px solid red
+      color: red
+
+      &:active
+        background-color: red
+        color: white
+
+    .save
+      border: 1px solid #04a704
+      color: #04a704
+
+      &:active
+        background-color: #04a704
+        color: white
+

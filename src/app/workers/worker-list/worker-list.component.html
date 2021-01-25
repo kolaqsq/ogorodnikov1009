@@ -1,0 +1,56 @@
+<div class="filter">
+  <label for="filter">Поиск: </label>
+  <input
+    [(ngModel)]="filterValue"
+    id="filter"
+    name="filter"
+    placeholder="Введите имя или фамилию"
+  />
+</div>
+
+<div *ngIf="(workers | filterWorkers: filterValue).length > 0" class="list">
+  <table>
+    <tr>
+      <th><a
+        (click)="changeOrderIdState()"
+      >{{orderId}}</a></th>
+      <th>Фамилия</th>
+      <th>Имя</th>
+      <th><a
+        (click)="changeOrderAgeState()"
+      >{{orderAge}}</a></th>
+      <th>Отдел</th>
+      <th colspan="2">
+        <button
+          (click)="onAddProfile()"
+          class="add"
+        >
+          Добавить
+        </button>
+      </th>
+    </tr>
+    <tr *ngFor="let worker of workers | orderBy: orderType:orderState | filterWorkers: filterValue ">
+      <th>{{worker.id}}</th>
+      <td>{{worker.surname}}</td>
+      <td>{{worker.name}}</td>
+      <td>{{getAge(worker)}}</td>
+      <td>{{departments[worker.department]}}</td>
+      <td>
+        <button
+          (click)="onLinkProfile(worker.id)"
+          class="redact"
+        >
+          Редактировать
+        </button>
+      </td>
+      <td>
+        <button
+          (click)="onDelete(worker.id)"
+          class="delete"
+        >
+          Удалить
+        </button>
+      </td>
+    </tr>
+  </table>
+</div>

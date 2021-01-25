@@ -1,0 +1,92 @@
+$standard-font: 'Montserrat', sans-serif
+
+.filter
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: flex-start
+  margin: 2.5%
+
+  label
+    font-family: $standard-font
+    font-weight: 300
+    font-size: 1rem
+    padding: 2px 0
+    margin-right: 2.5%
+
+  input
+    font-family: $standard-font
+    font-weight: 300
+    font-size: 1rem
+    border: 1px solid black
+    padding: 1px 0
+    width: 50%
+    max-width: 500px
+
+.list
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  justify-content: flex-start
+  margin: 2.5%
+
+  table
+    width: 100%
+    border-collapse: collapse
+
+    th, td
+      font-family: $standard-font
+      font-size: 1rem
+      font-weight: 300
+      text-align: center
+      padding: 2.5% 1%
+
+    th
+      font-weight: 500
+
+    tr
+      border-bottom: 1px solid black
+
+    tr:last-child
+      border-bottom: none
+
+    a
+      color: #7854c6
+
+    button
+      font-family: $standard-font
+      font-size: 1rem
+      font-weight: 300
+      border-radius: 5px
+      padding: 2% 5%
+      background: none
+
+      &:focus
+        outline: none
+
+    .delete
+      border: 1px solid red
+      color: red
+
+      &:active
+        background-color: red
+        color: white
+
+    .redact
+      border: 1px solid blue
+      color: blue
+
+      &:active
+        background-color: blue
+        color: white
+
+    .add
+      border: 1px solid #04a704
+      color: #04a704
+
+      &:active
+        background-color: #04a704
+        color: white
+
+
+

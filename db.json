@@ -1,0 +1,54 @@
+{
+  "workers": [
+    {
+      "id": 1,
+      "surname": "Макаров",
+      "name": "Вильфрид",
+      "patronymic": "Константинович",
+      "phone": "+7 (957) 362-54-21",
+      "email": "VilfridPlatonov459@gunga.org",
+      "birthdate": "1971-08-08",
+      "department": 0
+    },
+    {
+      "id": 2,
+      "surname": "Маслов",
+      "name": "Карр",
+      "patronymic": "Вадимович",
+      "phone": "+7 (901) 070-03-40",
+      "email": "KarrMaslov292@gunga.org",
+      "birthdate": "1988-01-12",
+      "department": 1
+    },
+    {
+      "id": 3,
+      "surname": "Железная",
+      "name": "Айслинн",
+      "patronymic": "Викторовна",
+      "phone": "+7 (958) 633-13-20",
+      "email": "AyslinnZheleznaya253@gunga.org",
+      "birthdate": "1992-03-04",
+      "department": 2
+    },
+    {
+      "id": 4,
+      "surname": "Калашникова",
+      "name": "Зелида",
+      "patronymic": "Платоновна",
+      "phone": "+7 (995) 045-51-25",
+      "email": "ZelidaKalashnikova652@gunga.org",
+      "birthdate": "1970-05-26",
+      "department": 3
+    },
+    {
+      "surname": "Вячеслав",
+      "name": "Самсонов",
+      "patronymic": "dfsd",
+      "phone": "+7 (999) 760-09-47",
+      "email": "kolaqsq1707@gmail.com",
+      "birthdate": "2021-01-07",
+      "department": 2,
+      "id": 5
+    }
+  ]
+}
