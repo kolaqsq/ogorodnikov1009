@@ -6,7 +6,7 @@ import {isNullOrUndefined} from '../shared/tools/is-null-or-unfrfined';
 
 
 @Component({
-  selector: 'app-worker-list',
+  selector: 'app-student-list',
   templateUrl: './student-list.component.html',
   styleUrls: ['./student-list.component.sass']
 })

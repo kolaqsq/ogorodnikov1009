@@ -6,7 +6,7 @@ import {StudentsService} from '../../shared/services/students.service';
 import {isNullOrUndefined} from '../shared/tools/is-null-or-unfrfined';
 
 @Component({
-  selector: 'app-worker-edit',
+  selector: 'app-student-edit',
   templateUrl: './student-edit.component.html',
   styleUrls: ['./student-edit.component.sass'],
 })
