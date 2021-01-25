@@ -50,7 +50,7 @@ export class StudentEditComponent implements OnInit {
     this.studentForm = new FormGroup({
       surname: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
-      patronymic: new FormControl('', Validators.required),
+      patronymic: new FormControl(''),
       phone: new FormControl(
         '',
         Validators.compose([
@@ -63,6 +63,7 @@ export class StudentEditComponent implements OnInit {
         Validators.compose([Validators.required, Validators.email])
       ),
       birthdate: new FormControl('', Validators.required),
+      group: new FormControl('', Validators.required),
       program: new FormControl('', Validators.required),
     });
     this.getData();
@@ -83,6 +84,7 @@ export class StudentEditComponent implements OnInit {
         phone: this.student.phone,
         email: this.student.email,
         birthdate: this.student.birthdate,
+        group: this.student.group,
         program: this.student.program,
       });
     }

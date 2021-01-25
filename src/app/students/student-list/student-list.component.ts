@@ -16,10 +16,12 @@ export class StudentListComponent implements OnInit {
   studentProgram = StudentProgram;
   searchValue = '';
   programValue = null;
+  groupValue = '';
   orderState = false;
   orderType = 'surname';
   orderId = 'ID';
   orderSurname = 'Фамилия';
+  groups: (Student | undefined)[] = [];
 
   constructor(private studentsService: StudentsService, private router: Router) {
   }
@@ -35,6 +37,10 @@ export class StudentListComponent implements OnInit {
     } catch (err) {
       console.error(err);
     }
+    this.groups = Array.from(new Set(this.students.map(a => a.group)))
+      .map(group => {
+        return this.students.find(a => a.group === group);
+      });
   }
 
   // getAge(student: Student) {

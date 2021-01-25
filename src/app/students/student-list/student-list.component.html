@@ -20,8 +20,25 @@
     <option [ngValue]="studentProgram.cad">Интеграция и программирование в САПР</option>
   </select>
 </div>
+<div class="filter">
+  <label for="filter_group">Поиск 2: </label>
+  <select
+    [(ngModel)]="groupValue"
+    id="filter_group"
+    name="filter_group"
+  >
+    <option *ngFor="let student of groups"
+            [ngValue]="student!.group">
+      {{student!.group}}
+    </option>
 
-<div *ngIf="(students | filterStudents: searchValue | filterPrograms: programValue).length > 0" class="list">
+  </select>
+</div>
+
+<div *ngIf="(students
+| filterStudents: searchValue
+| filterPrograms: programValue
+| filterGroups: groupValue).length > 0" class="list">
   <table>
     <tr>
       <th><a
@@ -41,11 +58,15 @@
         </button>
       </th>
     </tr>
-    <tr *ngFor="let student of students | orderBy: orderType:orderState | filterStudents: searchValue | filterPrograms: programValue">
+    <tr *ngFor="let student of students
+    | orderBy: orderType:orderState
+    | filterStudents: searchValue
+    | filterPrograms: programValue
+    | filterGroups: groupValue">
       <th>{{student.id}}</th>
-      <td>{{student.surname}} {{student.name.charAt(0) + '.'}} {{student.patronymic !== undefined ? student.patronymic!.charAt(0) + '.' : ''}}</td>
+      <td>{{student.surname}} {{student.name.charAt(0) + '.'}} {{student.patronymic !== '' ? student.patronymic!.charAt(0) + '.' : ''}}</td>
       <td>{{student.group}}</td>
-<!--      <td>{{getAge(student)}}</td>-->
+      <!--      <td>{{getAge(student)}}</td>-->
       <td>{{programs[student.program]}}</td>
       <td>
         <button

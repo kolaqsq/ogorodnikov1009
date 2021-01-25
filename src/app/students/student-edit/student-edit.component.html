@@ -1,58 +1,66 @@
 <form [formGroup]="studentForm">
   <div>
-    <label for="worker-surname">Фамилия: </label>
+    <label for="student-surname">Фамилия: </label>
     <input
       formControlName="surname"
-      id="worker-surname"
+      id="student-surname"
       type="text"
     />
   </div>
   <div>
-    <label for="worker-name">Имя: </label>
+    <label for="student-name">Имя: </label>
     <input
       formControlName="name"
-      id="worker-name"
+      id="student-name"
       type="text"
     />
   </div>
   <div>
-    <label for="worker-patronymic">Отчество: </label>
+    <label for="student-patronymic">Отчество: </label>
     <input
       formControlName="patronymic"
-      id="worker-patronymic"
+      id="student-patronymic"
       type="text"
     />
   </div>
   <div>
-    <label for="worker-phone">Телефон: </label>
+    <label for="student-phone">Телефон: </label>
     <input
       [textMask]="{mask: phoneMask}"
       formControlName="phone"
-      id="worker-phone"
+      id="student-phone"
       type="text"
     />
   </div>
   <div>
-    <label for="worker-email">E-mail: </label>
+    <label for="student-email">E-mail: </label>
     <input
       formControlName="email"
-      id="worker-email"
+      id="student-email"
       type="text"
     />
   </div>
   <div>
-    <label for="worker-birthdate">Дата рождения: </label>
+    <label for="student-birthdate">Дата рождения: </label>
     <input
       formControlName="birthdate"
-      id="worker-birthdate"
+      id="student-birthdate"
       type="date"
     />
   </div>
   <div>
-    <label for="worker-program">Отдел: </label>
+    <label for="student-group">Группа: </label>
+    <input
+      formControlName="group"
+      id="student-group"
+      type="text"
+    />
+  </div>
+  <div>
+    <label for="student-program">Отдел: </label>
     <select
       formControlName="program"
-      id="worker-program"
+      id="student-program"
     >
       <option [ngValue]="studentProgram.web">Веб-технологии</option>
       <option [ngValue]="studentProgram.security">Информационная безопасность</option>

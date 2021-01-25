@@ -48,6 +48,7 @@
       "id": 5,
       "surname": "Самсонов",
       "name": "Вячеслав",
+      "patronymic": "",
       "phone": "+7 (999) 760-09-47",
       "email": "kolaqsq1707@gmail.com",
       "birthdate": "2021-01-07",
@@ -64,6 +65,17 @@
       "group": "191-321",
       "program": 0,
       "id": 6
+    },
+    {
+      "surname": "Ogorodnikov",
+      "name": "Nikolay",
+      "patronymic": "",
+      "phone": "+7 (999) 760-09-47",
+      "email": "kolaqsq1707@gmail.com",
+      "birthdate": "2021-01-08",
+      "group": "123-321",
+      "program": 2,
+      "id": 7
     }
   ]
 }
