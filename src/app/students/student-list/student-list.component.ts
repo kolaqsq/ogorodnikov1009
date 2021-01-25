@@ -20,7 +20,7 @@ export class StudentListComponent implements OnInit {
   orderState = false;
   orderType = 'surname';
   orderId = 'ID';
-  orderSurname = 'Фамилия';
+  orderSurname = 'Студент';
   groups: (Student | undefined)[] = [];
 
   constructor(private studentsService: StudentsService, private router: Router) {
@@ -52,13 +52,13 @@ export class StudentListComponent implements OnInit {
     this.orderType = 'id';
     this.orderState = !this.orderState;
     this.orderId = this.orderState ? 'ID ↑' : 'ID ↓';
-    this.orderSurname = 'Фамилия';
+    this.orderSurname = 'Студент';
   }
 
   changeOrderSurnameState() {
     this.orderType = 'surname';
     this.orderState = !this.orderState;
-    this.orderSurname = this.orderState ? 'Фамилия ↓' : 'Фамилия ↑';
+    this.orderSurname = this.orderState ? 'Студент ↓' : 'Студент ↑';
     this.orderId = 'ID';
   }
 
