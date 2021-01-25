@@ -53,7 +53,7 @@ export class StudentListComponent implements OnInit {
   changeOrderSurnameState() {
     this.orderType = 'surname';
     this.orderState = !this.orderState;
-    this.orderSurname = this.orderState ? 'Студент ↓' : 'Студент ↑';
+    this.orderSurname = this.orderState ? 'Студент ↑' : 'Студент ↓';
     this.orderId = 'ID';
   }
 
