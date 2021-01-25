@@ -114,6 +114,6 @@ export class StudentEditComponent implements OnInit {
     } catch (err) {
       console.error(err);
     }
-    await this.router.navigate(['/users']);
+    await this.router.navigate(['/students']);
   }
 }
