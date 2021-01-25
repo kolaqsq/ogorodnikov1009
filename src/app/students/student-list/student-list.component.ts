@@ -43,11 +43,6 @@ export class StudentListComponent implements OnInit {
       });
   }
 
-  // getAge(student: Student) {
-  //   const age = Math.abs(Date.now() - new Date(student.birthdate).getTime());
-  //   return Math.floor((age / (1000 * 3600 * 24)) / 365.25);
-  // }
-
   changeOrderIdState() {
     this.orderType = 'id';
     this.orderState = !this.orderState;
