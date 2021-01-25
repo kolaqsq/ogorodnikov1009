@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Programs, Student} from '../../shared/models/students.model';
+import {Programs, Student, StudentProgram} from '../../shared/models/students.model';
 import {StudentsService} from '../../shared/services/students.service';
 import {Router} from '@angular/router';
 import {isNullOrUndefined} from '../shared/tools/is-null-or-unfrfined';
@@ -13,11 +13,13 @@ import {isNullOrUndefined} from '../shared/tools/is-null-or-unfrfined';
 export class StudentListComponent implements OnInit {
   students: Student[] = [];
   programs = Programs;
-  filterValue = '';
+  studentProgram = StudentProgram;
+  searchValue = '';
+  programValue = null;
   orderState = false;
-  orderType = 'id';
+  orderType = 'surname';
   orderId = 'ID';
-  orderAge = 'Возраст';
+  orderSurname = 'Фамилия';
 
   constructor(private studentsService: StudentsService, private router: Router) {
   }
@@ -35,22 +37,22 @@ export class StudentListComponent implements OnInit {
     }
   }
 
-  getAge(student: Student) {
-    const age = Math.abs(Date.now() - new Date(student.birthdate).getTime());
-    return Math.floor((age / (1000 * 3600 * 24)) / 365.25);
-  }
+  // getAge(student: Student) {
+  //   const age = Math.abs(Date.now() - new Date(student.birthdate).getTime());
+  //   return Math.floor((age / (1000 * 3600 * 24)) / 365.25);
+  // }
 
   changeOrderIdState() {
     this.orderType = 'id';
     this.orderState = !this.orderState;
     this.orderId = this.orderState ? 'ID ↑' : 'ID ↓';
-    this.orderAge = 'Возраст';
+    this.orderSurname = 'Фамилия';
   }
 
-  changeOrderAgeState() {
-    this.orderType = 'birthdate';
+  changeOrderSurnameState() {
+    this.orderType = 'surname';
     this.orderState = !this.orderState;
-    this.orderAge = this.orderState ? 'Возраст ↓' : 'Возраст ↑';
+    this.orderSurname = this.orderState ? 'Фамилия ↓' : 'Фамилия ↑';
     this.orderId = 'ID';
   }
 

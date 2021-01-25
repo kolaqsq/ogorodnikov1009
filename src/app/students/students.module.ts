@@ -10,10 +10,12 @@ import {FilterStudentsPipe} from './shared/pipes/filter-students.pipe';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {OrderModule} from 'ngx-order-pipe';
 import {TextMaskModule} from 'angular2-text-mask';
+import { FilterProgramsPipe } from './shared/pipes/filter-programs.pipe';
+import { FilterGroupsPipe } from './shared/pipes/filter-groups.pipe';
 
 
 @NgModule({
-  declarations: [StudentsComponent, StudentListComponent, StudentEditComponent, FilterStudentsPipe],
+  declarations: [StudentsComponent, StudentListComponent, StudentEditComponent, FilterStudentsPipe, FilterProgramsPipe, FilterGroupsPipe],
   imports: [
     CommonModule,
     StudentsRoutingModule,

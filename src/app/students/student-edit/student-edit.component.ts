@@ -63,7 +63,7 @@ export class StudentEditComponent implements OnInit {
         Validators.compose([Validators.required, Validators.email])
       ),
       birthdate: new FormControl('', Validators.required),
-      department: new FormControl('', Validators.required),
+      program: new FormControl('', Validators.required),
     });
     this.getData();
   }
@@ -83,7 +83,7 @@ export class StudentEditComponent implements OnInit {
         phone: this.student.phone,
         email: this.student.email,
         birthdate: this.student.birthdate,
-        department: this.student.program,
+        program: this.student.program,
       });
     }
   }

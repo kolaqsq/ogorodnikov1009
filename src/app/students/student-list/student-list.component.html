@@ -1,25 +1,37 @@
 <div class="filter">
   <label for="filter">Поиск: </label>
   <input
-    [(ngModel)]="filterValue"
+    [(ngModel)]="searchValue"
     id="filter"
     name="filter"
     placeholder="Введите имя или фамилию"
   />
 </div>
+<div class="filter">
+  <label for="filter_program">Поиск 2: </label>
+  <select
+    [(ngModel)]="programValue"
+    id="filter_program"
+    name="filter_program"
+  >
+    <option [ngValue]="studentProgram.web">Веб-технологии</option>
+    <option [ngValue]="studentProgram.security">Информационная безопасность</option>
+    <option [ngValue]="studentProgram.big_data">Большие и открытые данные</option>
+    <option [ngValue]="studentProgram.cad">Интеграция и программирование в САПР</option>
+  </select>
+</div>
 
-<div *ngIf="(students | filterStudents: filterValue).length > 0" class="list">
+<div *ngIf="(students | filterStudents: searchValue | filterPrograms: programValue).length > 0" class="list">
   <table>
     <tr>
       <th><a
         (click)="changeOrderIdState()"
       >{{orderId}}</a></th>
-      <th>Фамилия</th>
-      <th>Имя</th>
       <th><a
-        (click)="changeOrderAgeState()"
-      >{{orderAge}}</a></th>
-      <th>Отдел</th>
+        (click)="changeOrderSurnameState()"
+      >{{orderSurname}}</a></th>
+      <th>Группа</th>
+      <th>Программа обучения</th>
       <th colspan="2">
         <button
           (click)="onAddProfile()"
@@ -29,11 +41,11 @@
         </button>
       </th>
     </tr>
-    <tr *ngFor="let student of students | orderBy: orderType:orderState | filterStudents: filterValue ">
+    <tr *ngFor="let student of students | orderBy: orderType:orderState | filterStudents: searchValue | filterPrograms: programValue">
       <th>{{student.id}}</th>
-      <td>{{student.surname}}</td>
-      <td>{{student.name}}</td>
-      <td>{{getAge(student)}}</td>
+      <td>{{student.surname}} {{student.name.charAt(0) + '.'}} {{student.patronymic !== undefined ? student.patronymic!.charAt(0) + '.' : ''}}</td>
+      <td>{{student.group}}</td>
+<!--      <td>{{getAge(student)}}</td>-->
       <td>{{programs[student.program]}}</td>
       <td>
         <button
