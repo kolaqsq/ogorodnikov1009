@@ -6,10 +6,10 @@ import {AppComponent} from './app.component';
 import {MainComponent} from './main/main.component';
 import {InfoComponent} from './info/info.component';
 import {HeaderComponent} from './shared/components/header/header.component';
-import { HttpClientModule } from '@angular/common/http';
+import {HttpClientModule} from '@angular/common/http';
 
-import {FilterWorkersPipe} from "./workers/shared/pipes/filter-workers.pipe";
-import {OrderModule} from "ngx-order-pipe";
+// import {FilterStudentsPipe} from './students/shared/pipes/filter-students.pipe';
+import {OrderModule} from 'ngx-order-pipe';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import {OrderModule} from "ngx-order-pipe";
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    // FilterWorkersPipe,
+    // FilterStudentsPipe,
     OrderModule
   ],
   providers: [],

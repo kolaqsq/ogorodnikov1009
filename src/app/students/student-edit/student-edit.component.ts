@@ -1,20 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Worker, WorkerDepartment } from '../../shared/models/worker.model';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { WorkersService } from '../../shared/services/workers.service';
-import { isNullOrUndefined } from '../shared/tools/is-null-or-unfrfined';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {Student, StudentProgram} from '../../shared/models/students.model';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {StudentsService} from '../../shared/services/students.service';
+import {isNullOrUndefined} from '../shared/tools/is-null-or-unfrfined';
 
 @Component({
   selector: 'app-worker-edit',
-  templateUrl: './worker-edit.component.html',
-  styleUrls: ['./worker-edit.component.sass'],
+  templateUrl: './student-edit.component.html',
+  styleUrls: ['./student-edit.component.sass'],
 })
-export class WorkerEditComponent implements OnInit {
+export class StudentEditComponent implements OnInit {
   id!: number;
-  worker!: Worker;
-  workerDepartment = WorkerDepartment;
-  workerForm!: FormGroup;
+  student!: Student;
+  studentProgram = StudentProgram;
+  studentForm!: FormGroup;
   phoneMask = [
     '+',
     '7',
@@ -38,7 +38,7 @@ export class WorkerEditComponent implements OnInit {
 
   constructor(
     private activatedRouter: ActivatedRoute,
-    private workersService: WorkersService,
+    private workersService: StudentsService,
     private router: Router
   ) {
     this.activatedRouter.params.subscribe((param) => {
@@ -47,7 +47,7 @@ export class WorkerEditComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.workerForm = new FormGroup({
+    this.studentForm = new FormGroup({
       surname: new FormControl('', Validators.required),
       name: new FormControl('', Validators.required),
       patronymic: new FormControl('', Validators.required),
@@ -71,19 +71,19 @@ export class WorkerEditComponent implements OnInit {
   async getData() {
     if (!isNullOrUndefined(this.id)) {
       try {
-        let worker = this.workersService.getOneById(this.id!);
-        this.worker = await worker;
+        const student = this.workersService.getOneById(this.id);
+        this.student = await student;
       } catch (err) {
         console.error(err);
       }
-      this.workerForm!.patchValue({
-        name: this.worker!.name,
-        surname: this.worker!.surname,
-        patronymic: this.worker!.patronymic,
-        phone: this.worker!.phone,
-        email: this.worker!.email,
-        birthdate: this.worker!.birthdate,
-        department: this.worker!.department,
+      this.studentForm.patchValue({
+        name: this.student.name,
+        surname: this.student.surname,
+        patronymic: this.student.patronymic,
+        phone: this.student.phone,
+        email: this.student.email,
+        birthdate: this.student.birthdate,
+        department: this.student.program,
       });
     }
   }
@@ -91,15 +91,15 @@ export class WorkerEditComponent implements OnInit {
   async onSave() {
     if (!isNullOrUndefined(this.id)) {
       try {
-        await this.workersService.putOneById(this.id!, this.workerForm!.value);
+        await this.workersService.putOneById(this.id, this.studentForm.value);
       } catch (err) {
         console.error(err);
       }
     } else {
       try {
-        let res = await this.workersService.postOne(this.workerForm!.value);
-        this.router.navigate([this.router.url, res.id]);
-        this.getData();
+        const res = await this.workersService.postOne(this.studentForm.value);
+        await this.router.navigate([this.router.url, res.id]);
+        await this.getData();
       } catch (err) {
         console.error(err);
       }
@@ -108,10 +108,10 @@ export class WorkerEditComponent implements OnInit {
 
   async onDelete() {
     try {
-      await this.workersService.deleteOneById(this.id!);
+      await this.workersService.deleteOneById(this.id);
     } catch (err) {
       console.error(err);
     }
-    this.router.navigate(['/users']);
+    await this.router.navigate(['/users']);
   }
 }

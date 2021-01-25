@@ -8,7 +8,7 @@
   />
 </div>
 
-<div *ngIf="(workers | filterWorkers: filterValue).length > 0" class="list">
+<div *ngIf="(students | filterStudents: filterValue).length > 0" class="list">
   <table>
     <tr>
       <th><a
@@ -29,15 +29,15 @@
         </button>
       </th>
     </tr>
-    <tr *ngFor="let worker of workers | orderBy: orderType:orderState | filterWorkers: filterValue ">
-      <th>{{worker.id}}</th>
-      <td>{{worker.surname}}</td>
-      <td>{{worker.name}}</td>
-      <td>{{getAge(worker)}}</td>
-      <td>{{departments[worker.department]}}</td>
+    <tr *ngFor="let student of students | orderBy: orderType:orderState | filterStudents: filterValue ">
+      <th>{{student.id}}</th>
+      <td>{{student.surname}}</td>
+      <td>{{student.name}}</td>
+      <td>{{getAge(student)}}</td>
+      <td>{{programs[student.program]}}</td>
       <td>
         <button
-          (click)="onLinkProfile(worker.id)"
+          (click)="onLinkProfile(student.id)"
           class="redact"
         >
           Редактировать
@@ -45,7 +45,7 @@
       </td>
       <td>
         <button
-          (click)="onDelete(worker.id)"
+          (click)="onDelete(student.id)"
           class="delete"
         >
           Удалить

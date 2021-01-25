@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {MainComponent} from "./main/main.component";
-import {InfoComponent} from "./info/info.component";
+import {MainComponent} from './main/main.component';
+import {InfoComponent} from './info/info.component';
 
 const routes: Routes = [{
   path: '',
@@ -12,9 +12,9 @@ const routes: Routes = [{
     component: InfoComponent,
   },
   {
-    path: 'workers',
+    path: 'students',
     loadChildren: () =>
-      import('./workers/workers.module').then((m) => m.WorkersModule),
+      import('./students/students.module').then((m) => m.StudentsModule),
   },
 ];
 

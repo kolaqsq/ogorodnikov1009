@@ -1,4 +1,4 @@
-<form [formGroup]="workerForm">
+<form [formGroup]="studentForm">
   <div>
     <label for="worker-surname">Фамилия: </label>
     <input
@@ -54,16 +54,16 @@
       formControlName="department"
       id="worker-department"
     >
-      <option [ngValue]="workerDepartment.it">IT отдел</option>
-      <option [ngValue]="workerDepartment.sales">Отдел продаж</option>
-      <option [ngValue]="workerDepartment.delivery">Отдел доставки</option>
-      <option [ngValue]="workerDepartment.legal">Юридический отдел</option>
+      <option [ngValue]="studentProgram.web">Веб-технологии</option>
+      <option [ngValue]="studentProgram.security">Информационная безопасность</option>
+      <option [ngValue]="studentProgram.big_data">Большие и открытые данные</option>
+      <option [ngValue]="studentProgram.cad">Интеграция и программирование в САПР</option>
     </select>
   </div>
   <div class="row">
     <button
       (click)="onSave()"
-      [disabled]="workerForm.invalid"
+      [disabled]="studentForm.invalid"
       class="save"
     >Сохранить
     </button>
